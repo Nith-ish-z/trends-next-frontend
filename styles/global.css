@@ -1,0 +1,21 @@
+/* Body font and background only */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Optional custom tweaks */
+.navbar .profile-btn {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-color: #0070f3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}

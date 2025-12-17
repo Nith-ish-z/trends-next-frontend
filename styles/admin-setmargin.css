@@ -1,0 +1,11 @@
+/* small slide animation between modes */
+.admin-margin-container {
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.mode-product { transform: translateX(0); opacity: 1; }
+.mode-category { transform: translateX(0); opacity: 1; }
+.mode-subcategory { transform: translateX(0); opacity: 1; }
+
+/* For smoother changes you can extend with classes that shift content - simple approach above is enough.
+   If you want left->right animations you can add specific class toggles and animate translateX accordingly. */

@@ -1,0 +1,106 @@
+:root{
+  --time : 8s;
+}
+.brand-grp{     /*-- Brand section --*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-carousel{
+  position: relative;
+  height: 6vw;
+  width: 100vw;
+  overflow: hidden;
+}
+.brand-carousel::-webkit-scrollbar{
+  display: none;
+}
+
+.brand-card{
+  position: absolute;
+  height: inherit;
+  width: 8vw;
+  overflow: hidden;
+  color: #000;
+  justify-content: center;
+  display: flex;
+  left: 100%;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time)/var(--item) * (var(--item) - var(--i)) * -1);
+}
+
+.brand-carousel:hover .brand-card {
+  animation-play-state: paused;
+}
+
+.brand-card .img{
+  height: 100%;
+  width: 160%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease,
+    transform 0.4s ease;
+}
+
+.brand-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.10);
+}
+
+@keyframes scroll{
+  to{
+    left: -21vw;
+  }
+}
+
+.category-card{         /* -- Category card section --*/
+  height: min-content;
+  margin: 12px;
+  width: 100%;
+  transition: transform 0.4s ease-in ,0.2s ease-out,box-shadow 0.3s ease-in-out ;
+}
+
+.category-card:hover{
+  transform: scale(1.04);
+  box-shadow: 5px 5px 10px gray;
+  border-color: rgba(128, 128, 128, 0.25);
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.edge-smooth{
+    -webkit-mask-image: linear-gradient(to bottom, 
+      rgba(0, 0, 0, 1) 75%, 
+      rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, 
+      rgba(0, 0, 0, 1) 75%, 
+      rgba(0, 0, 0, 0) 100%);
+}
+
+.btn-pointer{
+  cursor: pointer;
+}
+
+.wish-btn{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+.wish-btn:hover{
+    background-color: aliceblue;
+    color: #000;
+}
+
+.product-card{
+    border : 2px solid transparent
+}
+.product-card:hover{
+    background-color: #0000000a;
+    border: 2px solid black;
+}
+
+.nav-icon{
+  cursor: pointer;
+  height: auto;
+}
