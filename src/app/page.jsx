@@ -82,7 +82,7 @@ export default function Home(){
 
 	async function loadHome(){
 		const res = await get("/");
-		if(res.status === 200) setResponse(res.data)
+		if(res?.status === 200) setResponse(res.data)
 			else console.error(res.data || "Error while fetching Product details");
 	}
 	useEffect(

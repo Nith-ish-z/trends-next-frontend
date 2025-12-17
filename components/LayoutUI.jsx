@@ -28,7 +28,7 @@ export default function LayoutUI({children}){
 
     const loadCategories = async () =>{
         const res = await get("product/categories");
-        if(res.status === 200) setCategories(res?.data)
+        if(res?.status === 200) setCategories(res?.data)
             else console.error( res?.data || "Error while loading categories info")
     }
 
