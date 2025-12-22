@@ -34,7 +34,7 @@ export default function FilterPage (){
     setFilter((p) => ({
       ...p,
       subCategoryId : p.subCategoryId.filter((subId) =>
-        availableSubCategories.some((s) => s.sub_cat_id === subId) // .some returns true or false with any one value
+        availableSubCategories?.some((s) => s.sub_cat_id === subId) // .some returns true or false with any one value
       )
     }));
   }, [filter.categoryId]);
@@ -74,7 +74,7 @@ export default function FilterPage (){
   }
 
   const isInWishlist = (id) => {
-    return user.wishItem.some(item => item.productId === id);
+    return user.wishItem?.some(item => item?.productId === id);
   };
 
 
