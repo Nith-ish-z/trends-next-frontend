@@ -37,7 +37,7 @@ export default function NavReact({showCart,showWish,showAccount}){
             
             <Navbar.Collapse id='basic-navbar-nav' className=' justify-content-end'>
                 <Nav className='fs-6'>
-                    <div className={user?.role === "ADMIN" ? "m-auto me-2" : "d-none"}>
+                    <div className={user?.role !== "ADMIN" ? "d-none" : "m-auto me-2"}>
                         <a className={ pathname === "/admin" ? "btn disabled btn-secondary" : 'btn btn-primary'} onClick={()=>{router.push("/admin")}}>Admin</a>
                     </div>
                     <div className='ms-auto d-md-flex pt-1 pe-2'>
