@@ -74,7 +74,7 @@ export default function FilterPage (){
   }
 
   const isInWishlist = (id) => {
-    return user.wishItem?.some(item => item?.productId === id);
+    return user?.wishItem?.some(item => item?.productId === id);
   };
 
 
@@ -95,8 +95,7 @@ export default function FilterPage (){
   const handleSearch = async (name) => {
 
     if (name){
-      const res = await post('/f',{...emptyFilter,name});
-      console.log("Nav Search..");
+      const res = await post('/f',{...emptyFilter,name : name.name});
       if(res.status === 200){
         setResponse(res.data);
 
