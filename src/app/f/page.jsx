@@ -225,7 +225,7 @@ export default function FilterPage (){
                         <Col  className="" style={{height:'min-content',width:'min-content'}}>
                           <Card className='position-relative product-card' style={{width:'17rem',borderRadius:'5px'}}>
                             <div>
-                              <CardImg variant='top' src={p.url} alt='product'style={{height:"25vh",width:"100%"}} />
+                              <CardImg variant='top' src={p.images[0]} alt='product'style={{height:"25vh",width:"100%"}} />
                               <div style={{position: 'absolute',top: '5px',right: '5px',display: 'flex',gap: '0px',zIndex: 10}} >
                                 <Button className='px-1 py-0 pb-1 wish-btn' onClick={()=>toggleWish(p)}>
                                   {!isInWishlist(p?.productId) ? <IoMdHeartEmpty /> : <IoMdHeart color='red' /> }
