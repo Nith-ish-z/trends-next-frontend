@@ -79,7 +79,7 @@ export default function WishListManager({show,hideCanvas}){
                                         <div className="d-flex">
                                             <div>
                                                 <div className="rounded-circle overflow-hidden" style={{height:"65px",width:"65px"}}>
-                                                <img src={w.url.imageUrl} alt="product-img" className="w-100 h-100" />
+                                                <img src={w.url[0]} alt="product-img" className="w-100 h-100" />
                                             </div>
                                             </div>
 
