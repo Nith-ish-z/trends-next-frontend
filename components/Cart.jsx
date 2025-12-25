@@ -72,7 +72,7 @@ export default function CartManager({show,hideCanvas}){
                                                 <div className="d-flex">
                                                     <div>
                                                         <div className="rounded-circle overflow-hidden" style={{height:"65px",width:"65px"}}>
-                                                        <img src={c.url} alt="product-img" className="w-100 h-100" />
+                                                        <img src={c.url.imageUrl} alt="product-img" className="w-100 h-100" />
                                                     </div>
                                                     </div>
 
